@@ -1,9 +1,6 @@
-
 cvlib==0.2.7
 cvzone==1.6.1
 cycler==0.12.1
-
-
 firebase-admin==6.5.0
 importlib_metadata==8.0.0
 importlib_resources==6.4.0
