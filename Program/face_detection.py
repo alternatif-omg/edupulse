@@ -26,7 +26,7 @@ from datetime import datetime
 
 # Initialize Firebase
 try:
-    cred = credentials.Certificate(os.getenv('FIREBASE_CREDENTIAL_PATH', 'faceattendance-a740a-firebase-adminsdk-rqxwq-0c450476c9.json'))
+    cred = credentials.Certificate(os.getenv('FIREBASE_CREDENTIAL_PATH', 'faceattendance-a740a-firebase-adminsdk-rqxwq-0f6719139c.json'))
     firebase_admin.initialize_app(cred, {
         'databaseURL': os.getenv('FIREBASE_DB_URL', "https://faceattendance-a740a-default-rtdb.firebaseio.com/"),
         'storageBucket': os.getenv('FIREBASE_STORAGE_BUCKET', "faceattendance-a740a.appspot.com")
