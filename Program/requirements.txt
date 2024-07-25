@@ -16,6 +16,7 @@ cryptography==42.0.8
 cvlib==0.2.7
 cvzone==1.6.1
 cycler==0.12.1
+dlib @ file:///C:/Anaconda/envs/pose_detection/dlib-19.22.1-cp39-cp39-win_amd64.whl#sha256=0980480b21b47e0450752736a4f353915dd3fd565670978822d6b3d78c69de88
 entrypoints==0.4
 face-recognition==1.3.0
 face_recognition_models==0.3.0
