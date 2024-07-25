@@ -37,10 +37,12 @@ st.set_page_config(
 )
 
 # Check if the Firebase app is already initialized
+import streamlit as st
+from firebase_admin import credentials, initialize_app
+
 if not firebase_admin._apps:
     # Initialize Firebase
-    cred = credentials.Certificate(
-        "faceattendance-a740a-firebase-adminsdk-rqxwq-0f6719139c.json")
+    cred = credentials.Certificate(st.secrets["firebase"])
     firebase_admin.initialize_app(cred, {
         'databaseURL': "https://faceattendance-a740a-default-rtdb.firebaseio.com/",
         'storageBucket': "faceattendance-a740a.appspot.com"
