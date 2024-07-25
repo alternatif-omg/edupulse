@@ -11,4 +11,4 @@ requests==2.32.3
 numpy==1.26.4
 opencv-python==4.10.0.84
 mediapipe==0.10.14
-dlib==19.24.0  # Tambahkan ini jika diperlukan
+dlib==19.22.1
