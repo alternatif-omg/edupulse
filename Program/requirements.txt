@@ -10,3 +10,4 @@ requests==2.32.3
 numpy==1.26.4
 opencv-python==4.10.0.84
 mediapipe==0.10.14
+dlib @ file:///C:/Anaconda/envs/pose_detection/dlib-19.22.1-cp39-cp39-win_amd64.whl#sha256=0980480b21b47e0450752736a4f353915dd3fd565670978822d6b3d78c69de88
