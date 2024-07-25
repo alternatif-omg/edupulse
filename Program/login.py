@@ -6,7 +6,6 @@ from PIL import Image
 import io
 from datetime import datetime
 from streamlit_calendar import calendar
-import face_recognition
 import os
 import signal
 import sys
