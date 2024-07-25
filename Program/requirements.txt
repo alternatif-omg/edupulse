@@ -5,6 +5,7 @@ firebase-admin==6.5.0
 importlib_metadata==8.0.0
 importlib_resources==6.4.0
 joblib==1.4.2
+streamlit-calendar==1.2.0
 mediapipe==0.10.14
 matplotlib==3.9.0
 numpy==1.26.4
