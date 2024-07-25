@@ -1,6 +1,7 @@
 streamlit==1.36.0
 firebase-admin==6.5.0
 Pillow==10.2.0
+firebase_admin == 6.5.0
 streamlit-calendar==1.2.0
 face_recognition==1.2.3
 psutil==6.0.0
