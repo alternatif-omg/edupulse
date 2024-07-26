@@ -17,4 +17,4 @@ Pillow==10.2.0
 pandas==2.2.2
 requests==2.32.3
 plyer==2.1.0
-streamlit==1.36.0
+
