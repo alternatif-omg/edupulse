@@ -208,7 +208,7 @@ def register(id, class_name, email, name, password, image, level):
 def load_posture_status():
     if os.path.exists('posture_status.json'):
         try:
-            with open('posture_status.json', 'r') as json_file):
+            with open('posture_status.json', 'r') as json_file:
                 data = json_file.read().strip()
                 if not data:  # Handle empty file
                     return None
