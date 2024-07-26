@@ -1,0 +1,446 @@
+2024-07-21 13:48:18,015 - ERROR - Error importing face_recognition: No module named 'face_recognition'
+2024-07-21 13:52:50,145 - ERROR - Error importing face_recognition: No module named 'face_recognition'
+2024-07-21 13:58:11,950 - INFO - face_recognition imported successfully
+2024-07-21 13:59:34,601 - INFO - face_recognition imported successfully
+2024-07-21 14:00:01,600 - INFO - face_recognition imported successfully
+2024-07-21 14:01:02,825 - INFO - face_recognition imported successfully
+2024-07-21 14:01:18,604 - INFO - face_recognition imported successfully
+2024-07-21 14:02:10,634 - INFO - face_recognition imported successfully
+2024-07-21 14:02:22,025 - INFO - face_recognition imported successfully
+2024-07-21 14:02:46,136 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 14:02:46,151 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 14:02:46,155 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 14:02:46,623 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 14:02:46,623 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 14:02:48,031 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 14:02:48,335 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 14:02:48,640 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2J5PB9TsGDKALoijrB.json?print=silent HTTP/11" 204 0
+2024-07-21 14:02:48,642 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 14:02:48,642 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 14:02:49,030 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 14:02:49,331 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 14:07:32,500 - INFO - face_recognition imported successfully
+2024-07-21 14:07:55,069 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 14:07:55,069 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 14:07:55,069 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 14:07:55,547 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 14:07:55,556 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 14:07:56,475 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 14:07:56,882 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 14:07:57,296 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2J6_UU-bg733iRmYFN.json?print=silent HTTP/11" 204 0
+2024-07-21 14:07:57,296 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 14:07:57,304 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 14:07:58,305 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 14:07:58,638 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 14:13:38,339 - ERROR - Error importing face_recognition: No module named 'face_recognition'
+2024-07-21 14:14:09,621 - ERROR - Error importing face_recognition: No module named 'face_recognition'
+2024-07-21 14:15:43,481 - ERROR - Error importing face_recognition: No module named 'face_recognition'
+2024-07-21 14:18:05,093 - INFO - face_recognition imported successfully
+2024-07-21 14:18:49,394 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 14:18:49,400 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 14:18:49,412 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 14:18:49,550 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 14:18:49,550 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 14:18:50,178 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 14:18:50,479 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 14:18:50,778 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2J944rq5u7QcJmhWTC.json?print=silent HTTP/11" 204 0
+2024-07-21 14:18:50,778 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 14:18:50,778 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 14:18:51,204 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 14:18:51,471 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:04:33,149 - INFO - face_recognition imported successfully
+2024-07-21 15:04:48,169 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:04:48,178 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:04:48,178 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:04:48,887 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:04:48,887 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:04:49,926 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:04:50,558 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:04:50,856 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JJaovgpMqV5XQ7tbJ.json?print=silent HTTP/11" 204 0
+2024-07-21 15:04:50,872 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:04:50,872 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:04:51,577 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:04:51,995 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:08:37,894 - INFO - face_recognition imported successfully
+2024-07-21 15:08:53,279 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:08:53,280 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:08:53,292 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:08:53,864 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:08:53,864 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:08:55,075 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:08:55,533 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:08:56,100 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JKXf2HoZcNun10eUW.json?print=silent HTTP/11" 204 0
+2024-07-21 15:08:56,115 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:08:56,115 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:08:56,872 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:08:57,236 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:09:49,105 - INFO - face_recognition imported successfully
+2024-07-21 15:09:58,391 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:09:58,391 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:09:58,391 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:09:59,083 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:09:59,088 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:10:00,137 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:10:00,516 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:10:01,018 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JKmYcdJuYgv1JEBum.json?print=silent HTTP/11" 204 0
+2024-07-21 15:10:01,018 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:10:01,034 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:10:01,650 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:10:02,002 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:14:14,080 - INFO - face_recognition imported successfully
+2024-07-21 15:14:23,816 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:14:23,816 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:14:23,816 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:14:23,989 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:14:24,005 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:14:24,602 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:14:24,917 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:14:25,233 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JLn6nNOW4B52zIVAz.json?print=silent HTTP/11" 204 0
+2024-07-21 15:14:25,233 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:14:25,233 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:14:25,642 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:14:25,999 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:16:41,622 - INFO - face_recognition imported successfully
+2024-07-21 15:16:52,116 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:16:52,118 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:16:52,121 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:16:52,250 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:16:52,250 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:16:52,959 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:16:53,294 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:16:53,636 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JMMLB8lxaRdlS7Kki.json?print=silent HTTP/11" 204 0
+2024-07-21 15:16:53,636 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:16:53,636 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:16:54,200 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:16:54,735 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:19:43,050 - INFO - face_recognition imported successfully
+2024-07-21 15:19:51,635 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:19:51,635 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:19:51,635 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:19:51,795 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:19:51,795 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:19:52,435 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:19:52,757 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:19:53,077 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JN299f4eu1fV93sUf.json?print=silent HTTP/11" 204 0
+2024-07-21 15:19:53,080 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:19:53,085 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:19:53,482 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:19:53,775 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:23:26,403 - INFO - face_recognition imported successfully
+2024-07-21 15:23:34,654 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:23:34,654 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:23:34,654 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:23:34,812 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:23:34,812 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:23:35,489 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:23:35,802 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:23:36,140 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JNtbQp10HVJurvhME.json?print=silent HTTP/11" 204 0
+2024-07-21 15:23:36,140 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:23:36,140 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:23:36,494 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:23:36,823 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:25:47,116 - INFO - face_recognition imported successfully
+2024-07-21 15:25:55,694 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:25:55,694 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:25:55,694 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:25:55,852 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:25:55,863 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:25:56,467 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:25:56,766 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:25:57,081 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JOR1LdX1A-YgxUbn9.json?print=silent HTTP/11" 204 0
+2024-07-21 15:25:57,087 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:25:57,087 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:25:57,476 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:25:57,823 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:37:26,873 - INFO - face_recognition imported successfully
+2024-07-21 15:37:38,762 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:37:38,762 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:37:38,762 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:37:38,935 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:37:38,951 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:37:39,548 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:37:39,848 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:37:40,148 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JR6fvGqMhOYdOEk6E.json?print=silent HTTP/11" 204 0
+2024-07-21 15:37:40,148 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:37:40,162 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:37:40,556 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:37:40,907 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:39:49,422 - INFO - face_recognition imported successfully
+2024-07-21 15:39:58,896 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:39:58,896 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:39:58,896 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:39:59,053 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:39:59,053 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:39:59,651 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:39:59,951 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:40:00,266 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JRdt0jJn2-nSgVlad.json?print=silent HTTP/11" 204 0
+2024-07-21 15:40:00,266 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:40:00,271 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:40:00,660 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:40:01,006 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:45:32,086 - ERROR - Error importing face_recognition: No module named 'face_recognition'
+2024-07-21 15:47:48,564 - INFO - face_recognition imported successfully
+2024-07-21 15:47:57,218 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:47:57,218 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:47:57,218 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:47:57,424 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:47:57,424 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:47:58,037 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:47:58,341 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:47:58,636 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JTTfzBmjD6JeKijdA.json?print=silent HTTP/11" 204 0
+2024-07-21 15:47:58,636 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:47:58,636 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:47:59,061 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:47:59,378 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:50:30,583 - INFO - face_recognition imported successfully
+2024-07-21 15:50:39,247 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:50:39,259 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:50:39,263 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:50:39,421 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:50:39,423 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:50:40,040 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:50:40,341 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:50:40,626 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JU5E8AWA_TX4cMNN7.json?print=silent HTTP/11" 204 0
+2024-07-21 15:50:40,633 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:50:40,633 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:50:41,029 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:50:41,363 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:51:07,868 - INFO - face_recognition imported successfully
+2024-07-21 15:51:16,916 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:51:16,916 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:51:16,916 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:51:17,073 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:51:17,073 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:51:17,701 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:51:18,001 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:51:18,283 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JUEQaDia_7KtzdaoU.json?print=silent HTTP/11" 204 0
+2024-07-21 15:51:18,283 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:51:18,296 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:51:18,852 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:51:19,246 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:57:14,804 - INFO - face_recognition imported successfully
+2024-07-21 15:57:22,859 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:57:22,859 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:57:22,859 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:57:23,018 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:57:23,018 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:57:23,662 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:57:23,975 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:57:24,290 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JVclp9mZcHq28XxRz.json?print=silent HTTP/11" 204 0
+2024-07-21 15:57:24,290 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:57:24,290 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:57:24,700 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:57:25,029 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 15:57:41,222 - INFO - face_recognition imported successfully
+2024-07-21 15:57:50,740 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:57:50,740 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 15:57:50,756 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 15:57:50,930 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 15:57:50,945 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 15:57:51,527 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 15:57:51,821 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 15:57:52,123 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JVj_7vvtGlJ3v4I1p.json?print=silent HTTP/11" 204 0
+2024-07-21 15:57:52,125 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 15:57:52,127 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 15:57:52,682 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 15:57:52,992 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 16:32:03,981 - INFO - face_recognition imported successfully
+2024-07-21 16:32:12,710 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 16:32:12,712 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 16:32:12,712 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 16:32:12,856 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 16:32:12,868 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 16:32:13,476 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 16:32:13,792 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 16:32:14,088 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2JcazXNlZ3TNswts1X.json?print=silent HTTP/11" 204 0
+2024-07-21 16:32:14,088 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 16:32:14,088 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 16:32:14,485 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 16:32:14,818 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-21 18:16:41,585 - INFO - face_recognition imported successfully
+2024-07-21 18:16:58,212 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 18:16:58,226 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-21 18:16:58,228 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-21 18:16:58,687 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-21 18:16:58,687 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-21 18:16:59,714 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-21 18:17:00,109 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-21 18:17:00,569 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2K-_eiTekZEJlsXt-6.json?print=silent HTTP/11" 204 0
+2024-07-21 18:17:00,569 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-21 18:17:00,583 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-21 18:17:01,434 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-21 18:17:01,922 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-22 06:34:21,956 - INFO - face_recognition imported successfully
+2024-07-22 06:34:30,425 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 06:34:30,425 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-22 06:34:30,425 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-22 06:34:30,584 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-22 06:34:30,584 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-22 06:34:31,337 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/963852.json HTTP/11" 200 112
+2024-07-22 06:34:31,648 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/963852.json HTTP/11" 200 31
+2024-07-22 06:34:31,948 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/963852/-O2MdOAiBAHC8pA59dPh.json?print=silent HTTP/11" 204 0
+2024-07-22 06:34:31,964 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 06:34:31,964 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-22 06:34:32,388 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F963852.png?projection=noAcl&prettyPrint=false HTTP/11" 200 773
+2024-07-22 06:34:32,768 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F963852.png?generation=1720940386681097&alt=media HTTP/11" 200 79426
+2024-07-22 21:51:14,239 - INFO - face_recognition imported successfully
+2024-07-22 21:51:29,924 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 21:51:29,926 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-22 21:51:29,930 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-22 21:51:30,424 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-22 21:51:30,426 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-22 21:51:31,442 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:32,569 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:33,797 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:35,030 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:36,469 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:38,001 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:39,278 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:41,175 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:43,115 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:44,853 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:47,926 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:49,303 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:50,316 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:51,512 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:51:52,683 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:52:26,608 - INFO - face_recognition imported successfully
+2024-07-22 21:52:38,256 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 21:52:38,258 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-22 21:52:38,263 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-22 21:52:38,666 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-22 21:52:38,668 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-22 21:52:39,546 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:52:39,955 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-22 21:52:40,366 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2PvXaGdB61cPpu1IHV.json?print=silent HTTP/11" 204 0
+2024-07-22 21:52:40,368 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 21:52:40,369 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-22 21:52:41,082 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-22 21:52:41,492 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-22 21:56:31,132 - INFO - face_recognition imported successfully
+2024-07-22 21:56:44,330 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 21:56:44,332 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-22 21:56:44,336 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-22 21:56:44,933 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-22 21:56:44,935 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-22 21:56:46,219 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-22 21:56:46,838 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-22 21:56:47,345 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2PwTolyJCSZ4V7hiQg.json?print=silent HTTP/11" 204 0
+2024-07-22 21:56:47,346 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-22 21:56:47,347 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-22 21:56:47,792 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-22 21:56:48,178 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-23 11:21:29,484 - INFO - face_recognition imported successfully
+2024-07-23 11:22:04,756 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-23 11:22:04,756 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-23 11:22:04,773 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-23 11:22:04,898 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-23 11:22:04,901 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-23 11:22:05,516 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-23 11:22:05,835 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-23 11:22:06,111 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2SonVap3GSYJd7G-3B.json?print=silent HTTP/11" 204 0
+2024-07-23 11:22:06,111 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-23 11:22:06,122 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-23 11:22:07,640 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-23 11:22:07,950 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1720940384692881&alt=media HTTP/11" 200 85735
+2024-07-25 12:45:20,326 - INFO - face_recognition imported successfully
+2024-07-25 12:46:07,957 - INFO - face_recognition imported successfully
+2024-07-25 12:46:27,946 - INFO - face_recognition imported successfully
+2024-07-25 12:47:00,474 - INFO - face_recognition imported successfully
+2024-07-25 12:48:02,646 - INFO - face_recognition imported successfully
+2024-07-25 12:49:00,731 - INFO - face_recognition imported successfully
+2024-07-25 12:49:09,600 - INFO - face_recognition imported successfully
+2024-07-25 12:49:21,337 - INFO - face_recognition imported successfully
+2024-07-25 12:49:38,344 - INFO - face_recognition imported successfully
+2024-07-25 12:51:48,376 - INFO - face_recognition imported successfully
+2024-07-25 12:57:04,885 - INFO - face_recognition imported successfully
+2024-07-25 12:57:17,188 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 12:57:17,198 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 12:57:17,198 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 12:57:18,746 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 12:57:18,764 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 12:57:19,480 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 12:57:19,803 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 12:57:20,121 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2cSlpKXL-5a0FfbSWF.json?print=silent HTTP/11" 204 0
+2024-07-25 12:57:20,121 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 12:57:20,121 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 12:57:20,659 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 12:57:20,989 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
+2024-07-25 12:58:25,270 - INFO - face_recognition imported successfully
+2024-07-25 12:59:14,844 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 12:59:14,846 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 12:59:14,854 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 12:59:16,003 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 12:59:16,005 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 12:59:16,984 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 12:59:17,373 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 12:59:17,837 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2cTDWMHrqeeISU3Yq0.json?print=silent HTTP/11" 204 0
+2024-07-25 12:59:17,844 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 12:59:17,847 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 12:59:18,453 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 12:59:18,876 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
+2024-07-25 13:00:18,179 - INFO - face_recognition imported successfully
+2024-07-25 13:00:45,253 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:00:45,255 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 13:00:45,260 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 13:00:45,795 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 13:00:45,800 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 13:00:46,483 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 13:00:46,829 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 13:00:47,149 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2cTZMrB7VZWXKKlGcY.json?print=silent HTTP/11" 204 0
+2024-07-25 13:00:47,151 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:00:47,153 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 13:00:47,685 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 13:00:48,065 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
+2024-07-25 13:02:32,005 - INFO - face_recognition imported successfully
+2024-07-25 13:02:46,813 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:02:46,815 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 13:02:46,819 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 13:02:47,969 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 13:02:47,972 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 13:02:48,839 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 13:02:49,302 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 13:02:49,716 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2cU1Ec48C9CTTp8JvT.json?print=silent HTTP/11" 204 0
+2024-07-25 13:02:49,718 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:02:49,721 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 13:02:50,455 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 13:02:50,884 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
+2024-07-25 13:04:45,108 - INFO - face_recognition imported successfully
+2024-07-25 13:05:01,494 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:05:01,500 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 13:05:01,509 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 13:05:02,839 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 13:05:02,848 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 13:05:03,862 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 13:05:04,193 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 13:05:04,530 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2cUYCK3Tsj3Yc8GVZ0.json?print=silent HTTP/11" 204 0
+2024-07-25 13:05:04,532 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:05:04,537 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 13:05:05,028 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 13:05:05,353 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
+2024-07-25 13:55:58,217 - INFO - face_recognition imported successfully
+2024-07-25 13:56:17,452 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:56:17,455 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 13:56:17,460 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 13:56:18,190 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 13:56:18,193 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 13:56:19,486 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 13:56:19,960 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 13:56:20,386 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2cfH5Vy1SnB3zJTt5H.json?print=silent HTTP/11" 204 0
+2024-07-25 13:56:20,388 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 13:56:20,392 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 13:56:21,064 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 13:56:21,571 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
+2024-07-25 14:07:06,778 - INFO - face_recognition imported successfully
+2024-07-25 14:07:30,081 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 14:07:30,082 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-07-25 14:07:30,085 - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-07-25 14:07:30,382 - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/11" 200 None
+2024-07-25 14:07:30,384 - DEBUG - Starting new HTTPS connection (1): faceattendance-a740a-default-rtdb.firebaseio.com:443
+2024-07-25 14:07:31,307 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "GET /Students/484768.json HTTP/11" 200 129
+2024-07-25 14:07:31,653 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "POST /Attendance/484768.json HTTP/11" 200 31
+2024-07-25 14:07:31,984 - DEBUG - https://faceattendance-a740a-default-rtdb.firebaseio.com:443 "PUT /Attendance/484768/-O2chq6mJ1kxIzrYi__8.json?print=silent HTTP/11" 204 0
+2024-07-25 14:07:31,985 - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-07-25 14:07:31,987 - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-07-25 14:07:32,483 - DEBUG - https://storage.googleapis.com:443 "GET /storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?projection=noAcl&prettyPrint=false HTTP/11" 200 857
+2024-07-25 14:07:32,870 - DEBUG - https://storage.googleapis.com:443 "GET /download/storage/v1/b/faceattendance-a740a.appspot.com/o/Images%2F484768.png?generation=1721886289771903&alt=media HTTP/11" 200 85183
