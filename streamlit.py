@@ -18,12 +18,16 @@ import pandas as pd
 import requests
 import random
 
+
 process = None
 
 # Load custom CSS
+
+
 def load_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 
 # Set page configuration
 st.set_page_config(
@@ -32,7 +36,14 @@ st.set_page_config(
     layout="wide"
 )
 
-# Initialize Firebase if not already initialized
+# Check if the Firebase app is already initialized
+
+
+# import streamlit as st
+# import firebase_admin
+# from firebase_admin import credentials
+
+# initializing credentials
 service_account_key = {
     "type": st.secrets["type"],
     "project_id": st.secrets["project_id"],
@@ -46,6 +57,7 @@ service_account_key = {
     "client_x509_cert_url": st.secrets["client_x509_cert_url"],
     "universe_domain": st.secrets["universe_domain"]
 }
+# print(service_account_key)
 
 if not firebase_admin._apps:
     cred = credentials.Certificate(service_account_key)
@@ -53,6 +65,20 @@ if not firebase_admin._apps:
         'databaseURL': "https://faceattendance-a740a-default-rtdb.firebaseio.com/",
         'storageBucket': "faceattendance-a740a.appspot.com"
     })
+
+# load directly
+#cred = credentials.Certificate(service_account_key)
+#firebase_admin.initialize_app(cred, {
+#        'databaseURL': "https://faceattendance-a740a-default-rtdb.firebaseio.com/",
+#        'storageBucket': "faceattendance-a740a.appspot.com"
+#})
+
+# if not firebase_admin._apps:
+#     cred = credentials.Certificate(service_acccount_key)
+#     firebase_admin.initialize_app(cred, {
+#         'databaseURL': "https://faceattendance-a740a-default-rtdb.firebaseio.com/",
+#         'storageBucket': "faceattendance-a740a.appspot.com"
+#     })
 
 load_css("styles.css")
 
@@ -62,6 +88,8 @@ teachers_ref = db.reference('Teachers')
 bucket = storage.bucket()
 
 # Function to save image to Firebase Storage
+
+
 def save_image(image, image_name):
     img = Image.open(image)
     img = img.resize((216, 216))
@@ -73,12 +101,14 @@ def save_image(image, image_name):
     return blob.public_url
 
 # Function to start face detection
+
+
 def run_face_detection():
     global process
     if platform.system() == "Windows":
         process = subprocess.Popen(
             ["cmd", "/c", "start", "/MIN", "cmd", "/c",
-             sys.executable, "face_detection.py"],
+                sys.executable, "face_detection.py"],
             creationflags=subprocess.CREATE_NO_WINDOW,
             shell=True
         )
@@ -90,6 +120,7 @@ def run_face_detection():
             preexec_fn=os.setsid
         )
     st.session_state.running = True
+
 
 # Function to stop face detection
 def stop_face_detection():
@@ -122,58 +153,84 @@ def stop_face_detection():
         process = None
     st.session_state.running = False
 
-# Function to get attendance data from Firebase
+
+# Fungsi untuk mengambil data absen dari Firebase
 def get_attendance_data():
     ref = db.reference('Attendance')
     data = ref.get()
     return data
 
-# Function to process attendance data
+# Fungsi untuk memproses data absen
 def process_attendance_data(data):
+    # Daftar untuk menampung data yang valid
     processed_data = []
+    
+    # Ambil tanggal hari ini
     today = datetime.now().date()
+    
     for student_id, records in data.items():
         for record_id, record in records.items():
+            # Periksa apakah kunci penting ada
             if 'name' in record and 'status' in record and 'timestamp' in record:
                 try:
+                    # Parsing timestamp
                     record_date = datetime.strptime(record['timestamp'], '%Y-%m-%d %H:%M:%S').date()
+                    
+                    # Tambahkan data yang valid dan cocok dengan tanggal hari ini
                     if record_date == today:
                         processed_data.append({
-                            'Name': record['name'],
-                            'Status': record['status'],
-                            'Time': record['timestamp']
+                        'Name': record['name'],
+                        'Status': record['status'],
+                        'Time': record['timestamp']
                         })
                 except ValueError:
+                    # Jika format timestamp tidak valid, lewati record ini
                     continue
+    
     return processed_data
 
 def convert_df_to_csv(df):
+    # Convert DataFrame to CSV format
     csv = df.to_csv(index=False)
     return csv
+    
+    
 
-# Function to get attendance dates
 def get_attendance_dates():
+    # Ambil data absensi dari Firebase
     ref = db.reference('Attendance')
     attendance_data = ref.get()
+
+    # Proses data untuk mendapatkan tanggal-tanggal absensi
     attendance_dates = set()
     for student_id, records in attendance_data.items():
         for record_id, record in records.items():
-            date = datetime.strptime(record['timestamp'].split()[0], "%Y-%m-%d").date()
+            date = datetime.strptime(record['timestamp'].split()[
+                                     0], "%Y-%m-%d").date()
             attendance_dates.add(date.isoformat())
+
     return list(attendance_dates)
 
-# Function to get sorted student data
+
+
 def get_sorted_student_data():
     ref = db.reference('interaksi')
     data = ref.get()
+
     if data:
-        students = [{"Name": name, "points": info["points"], "last_updated": info["last_updated"]} for name, info in data.items()]
-        students_sorted = sorted(students, key=lambda x: x["points"], reverse=True)
+        # Mengubah data menjadi list of dictionaries
+        students = [{"Name": name, "points": info["points"], "last_updated": info["last_updated"]}
+                    for name, info in data.items()]
+
+        # Mengurutkan berdasarkan poin (dari terbesar)
+        students_sorted = sorted(
+            students, key=lambda x: x["points"], reverse=True)
+
         return students_sorted
     else:
         return []
 
-# Login function
+
 def login(email, password, level):
     ref = teachers_ref if level == "Teacher" else students_ref
     users = ref.get()
@@ -187,6 +244,8 @@ def login(email, password, level):
     return False
 
 # Register function
+
+
 def register(id, class_name, email, name, password, image, level):
     ref = db.reference('Teachers') if level == "Teacher" else db.reference('Students')
     new_user = {
@@ -204,7 +263,9 @@ def register(id, class_name, email, name, password, image, level):
     save_image(image, id)
     st.success(f"User {name} registered successfully.")
 
-# Function to load posture status
+# Function to show the dashboard
+
+
 def load_posture_status():
     if os.path.exists('posture_status.json'):
         try:
@@ -214,20 +275,22 @@ def load_posture_status():
                     return None
                 return json.loads(data)
         except json.JSONDecodeError:
-            st.error("Error reading posture status data. The file may be corrupted or empty.")
+            st.error(
+                "Error reading posture status data. The file may be corrupted or empty.")
             return None
     return None
 
-# Function to display notification
+
 def display_notification(status, timestamp):
     if status == "slouching":
         notification.notify(
             title="Posture Alert",
             message=f"Student detected with poor posture (slouching) at {timestamp}",
             app_name="Posture Monitoring",
+
         )
 
-# Function to show the dashboard
+
 def show_dashboard():
     st.title("📚 Aplikasi Deteksi Pose dan Interaksi Siswa")
 
@@ -250,106 +313,372 @@ def show_dashboard():
 
         user_id = None
         if user_level == 'Student':
-            students = students_ref.order_by_child('name').equal_to(user_data['name']).get()
+            students = students_ref.order_by_child(
+                'name').equal_to(user_data['name']).get()
             if students:
                 user_id = list(students.keys())[0]
         else:
-            teachers = teachers_ref.order_by_child('name').equal_to(user_data['name']).get()
+            teachers = teachers_ref.order_by_child(
+                'name').equal_to(user_data['name']).get()
             if teachers:
                 user_id = list(teachers.keys())[0]
 
         if user_id:
             st.write(f"**ID:** {user_id}")
         else:
-            st.warning("User ID not found")
+            st.warning("User ID not found.")
 
-        profile_picture_url = f"https://firebasestorage.googleapis.com/v0/b/faceattendance-a740a.appspot.com/o/Images%2F{user_id}.png?alt=media"
-        st.image(profile_picture_url, caption="Profile Picture", use_column_width=True)
-
-        st.write(f"**Name:** {user_data['name']}")
-        st.write(f"**Email:** {user_data['email']}")
-        if user_level == 'Student':
-            st.write(f"**Class:** {user_data['class']}")
+        if user_id:
+            profile_picture_url = f"https://firebasestorage.googleapis.com/v0/b/faceattendance-a740a.appspot.com/o/Images%2F{user_id}.png?alt=media&token=70be87d6-c8fe-4e7f-a275-2eb728e4e2e8"
+            st.image(profile_picture_url, width=180)
         else:
-            st.write(f"**Subject:** {user_data['subject']}")
+            st.warning("Profile picture not found.")
 
-    # Show the correct section based on user level
+        if user_level == 'Student':
+            st.markdown(f"""
+            **Nama:** {user_data['name']}  
+            **Email:** {user_data['email']}  
+            **Class:** {user_data.get('class', 'N/A')}
+            """)
+        else:
+            st.markdown(f"""
+            **Nama:** {user_data['name']}  
+            **Email:** {user_data['email']}  
+            **Subject:** {user_data.get('subject', 'N/A')}
+            """)
+
+    
+
+# Dapatkan tanggal-tanggal absensi
+    attendance_dates = get_attendance_dates()
+
+
+# Buat events untuk kalender
+    events = [{"start": date, "display": "background",
+               "backgroundColor": "#28a745"} for date in attendance_dates]
+
+# Buat konfigurasi kalender
+    calendar_options = {
+        "headerToolbar": {
+            "left": "prev,next today",
+            "center": "title",
+            "right": "dayGridMonth,timeGridWeek,timeGridDay",
+        },
+        "initialView": "dayGridMonth",
+        "events": events
+    }
+
+# Tampilkan kalender
+   
+
+# Tampilkan tanggal yang dipilih (opsional)
+    # Conditional display based on user level
     if user_level == 'Student':
-        st.subheader("Selamat datang di aplikasi deteksi pose dan interaksi siswa!")
-        st.write("Anda dapat menggunakan aplikasi ini untuk memantau kehadiran dan interaksi Anda di kelas.")
+        st.subheader("Absensi")
+        selected_dates = calendar(events=events, options=calendar_options)
+
+        # Get attendance dates
+        attendance_dates = get_attendance_dates()
+
+        # Create events for calendar
+        events = [{"start": date, "display": "background",
+                   "backgroundColor": "#28a745"} for date in attendance_dates]
+
+        # Calendar configuration
+        calendar_options = {
+            "headerToolbar": {
+                "left": "prev,next today",
+                "center": "title",
+                "right": "dayGridMonth,timeGridWeek,timeGridDay",
+            },
+            "initialView": "dayGridMonth",
+            "events": events
+        }
+
+        
+
+        # Add "Absen" button
+        if st.button("Absen"):
+            if selected_dates:
+                run_face_detection()
+            else:
+                st.warning(
+                    "Please select at least one date to mark attendance.")
+
+        # Add "Stop" button
+        if st.session_state.get('running', False):
+            if st.button("Stop"):
+                stop_face_detection()
+
+        st.title("Student Points Leaderboard")
+
+        students_data = get_sorted_student_data()
+
+        if students_data:
+            # Create DataFrame for display
+            df = pd.DataFrame(students_data)
+            # Generate HTML with CSS for styling
+            html = df.to_html(classes='styled-table', index=False)
+
+            # Add CSS styling for the table
+            st.markdown("""
+            <style>
+            .styled-table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #ddd;
+            }
+            .styled-table th, .styled-table td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            .styled-table tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            .styled-table th {
+                background-color: #FF4B4B;
+                color: white;
+            }
+            </style>
+            """, unsafe_allow_html=True)
+
+            # Display the table with styling
+            st.markdown(html, unsafe_allow_html=True)
+        else:
+            st.write("Tidak ada data siswa yang tersedia.")
+
+        # Streamlit UI for notifications
+        st.subheader("Notifications")
 
     elif user_level == 'Teacher':
-        st.subheader("👨‍🏫 Panel Guru")
-        col1, col2 = st.columns(2)
-
-        with col1:
-            st.write("### 📅 Kalender Kehadiran")
-            dates = get_attendance_dates()
-            calendar(selected=dates)
-
-        with col2:
-            st.write("### 🏆 Peringkat Interaksi Siswa")
-            students_sorted = get_sorted_student_data()
-            if students_sorted:
-                df = pd.DataFrame(students_sorted)
-                st.dataframe(df)
-
-    st.write("### 📈 Status Postur Siswa")
-    posture_data = load_posture_status()
-    if posture_data:
-        for status, timestamp in posture_data:
-            display_notification(status, timestamp)
-            st.write(f"**Posture Status:** {status} at {timestamp}")
-
-    # Show attendance data
-    st.write("### 📊 Data Kehadiran Hari Ini")
-    attendance_data = get_attendance_data()
-    if attendance_data:
+        # Ambil data absen dari Firebase
+        # Filter data untuk hari ini
+        attendance_data = get_attendance_data()
         processed_data = process_attendance_data(attendance_data)
+        
+        
+# Tampilkan data hasil filter dengan kolom name, status, timestamp
+        st.header('Attendance Data Today')
         if processed_data:
-            df = pd.DataFrame(processed_data)
-            st.dataframe(df)
-            csv = convert_df_to_csv(df)
-            st.download_button(label="📥 Download Data Kehadiran",
-                               data=csv,
-                               file_name='attendance_data.csv',
-                               mime='text/csv')
+    # Buat DataFrame dari data yang relevan
+           df = pd.DataFrame(processed_data)
+           st.write("""
+        <style>
+        .dataframe {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .dataframe th, .dataframe td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;  /* Menjaga teks rata kiri di sel tabel */
+        }
+        .dataframe th, .dataframe td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .dataframe tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .dataframe th {
+            background-color:  #E4003A;
+            color: white;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    
+    # Hapus urutan angka (index) dari DataFrame
+           st.write(df.to_html(classes='dataframe', index=False), unsafe_allow_html=True)
+           # Menyediakan tombol unduh CSV
+           csv = convert_df_to_csv(df)
+           st.download_button(
+              label="Download CSV",
+              data=csv,
+              file_name='attendance_data.csv',
+              mime='text/csv'
+           )
+        else:
+           st.write('No data available.')
+        
+        st.subheader("Student Points Leaderboard")
 
-# Main function to handle login and registration
-def main():
-    if 'logged_in' not in st.session_state:
-        st.session_state['logged_in'] = False
-        st.session_state['running'] = False
+        students_data = get_sorted_student_data()
 
-    if st.session_state['logged_in']:
-        show_dashboard()
-        if st.button("Log Out"):
-            st.session_state['logged_in'] = False
-            st.session_state['user'] = None
-            st.session_state['level'] = None
-            st.experimental_set_query_params()
-    else:
-        tab1, tab2 = st.tabs(["Login", "Register"])
+        if students_data:
+            # Create DataFrame for display
+            df = pd.DataFrame(students_data)
+            # Generate HTML with CSS for styling
+            html = df.to_html(classes='styled-table', index=False)
 
-        with tab1:
-            st.header("Login")
-            email = st.text_input("Email")
-            password = st.text_input("Password", type="password")
-            level = st.selectbox("Level", ["Student", "Teacher"])
-            if st.button("Login"):
-                login(email, password, level)
+            # Add CSS styling for the table
+            st.markdown("""
+            <style>
+            .styled-table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #ddd;
+            }
+            .styled-table th, .styled-table td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            .styled-table tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            .styled-table th {
+                background-color: #FF4B4B;
+                color: white;
+            }
+            </style>
+            """, unsafe_allow_html=True)
 
-        with tab2:
-            st.header("Register")
-            id = st.text_input("ID")
-            class_name = st.text_input("Class (for Students) / Subject (for Teachers)")
-            email = st.text_input("Email")
-            name = st.text_input("Name")
-            password = st.text_input("Password", type="password")
-            image = st.file_uploader("Profile Picture", type=["png", "jpg", "jpeg"])
-            level = st.selectbox("Level", ["Student", "Teacher"])
-            if st.button("Register"):
-                register(id, class_name, email, name, password, image, level)
+            # Display the table with styling
+            st.markdown(html, unsafe_allow_html=True)
+        else:
+            st.write("Tidak ada data siswa yang tersedia.")
 
-if __name__ == "__main__":
-    main()
+        # Add feature for automatic and manual actions
+        # Inisialisasi variabel global
+       # ESP32_IP = "http://192.168.17.134"  # Ganti dengan IP ESP32 Anda
+
+      #  st.title("Brightness")
+
+# Mode selection
+      #  mode = st.radio("Mode", ("Auto", "Manual"))
+
+       # if mode == "Auto":
+       #    requests.post(f"{ESP32_IP}/control", json={"mode": "auto"})
+       # else:
+         #  requests.post(f"{ESP32_IP}/control", json={"mode": "manual"})
+         #  brightness = st.select_slider("Brightness", options=["Off", "Medium", "Bright"])
+         #  brightness_value = {"Off": 0, "Medium": 1, "Bright": 2}[brightness]
+         #  requests.post(f"{ESP32_IP}/control", json={"brightness": brightness_value})
+
+# Display sensor data
+        st.header("Sensor Data")
+        lux_value = st.empty()
+        distance_value = st.empty()
+
+        lux_values = [611.00, 610.00, 612.00, 469.00, 428.00, 605.00, 603.00, 580.00, 563.00]
+        distance_values = [1192.00, 7.00, 5.00, 67.00, 20.00, 8.00, 87.00, 75.00]
+
+        while True:
+           try:
+              # Simulate fetching data from the ESP32
+              lux = random.choice(lux_values)
+              distance = random.choice(distance_values)
+        
+              lux_value.metric("Light Level (Lux)", f"{lux:.2f}")
+              distance_value.metric("Distance (cm)", f"{distance:.2f}")
+        
+              time.sleep(1)
+           except Exception as e:
+             st.error(f"Failed to connect to ESP32: {e}")
+             break
+
+    # Implement manual action logic here
+
+    def main():
+        posture_status = load_posture_status()
+        status = None
+        timestamp = None
+
+        if posture_status:
+            status = posture_status.get("status")
+            timestamp = posture_status.get("timestamp")
+
+        if status == "slouching":
+            st.markdown(
+                f"""
+              <div style='
+                color: white;
+                background-color: red;
+                font-size: 18px;
+                padding: 10px;
+                border-radius: 5px;
+              '>
+                Student detected with poor posture (slouching) at {timestamp}
+              </div>
+              """,
+                unsafe_allow_html=True
+            )
+            display_notification(status, timestamp)
+        else:
+            st.write("")
+
+    if __name__ == "__main__":
+
+        main()
+
+    # Set polling interval
+        polling_interval = 5  # in seconds
+
+    # Poll for updates
+        while True:
+            time.sleep(polling_interval)
+            st.experimental_rerun()
+
+
+# Function to load posture status
+
+
+# Initialize session state
+if 'logged_in' not in st.session_state:
+    st.session_state['logged_in'] = False
+    st.session_state['user'] = None
+    st.session_state['level'] = None
+    st.session_state['running'] = False
+
+# Load and display notifications
+
+
+
+
+if st.session_state['logged_in']:
+    show_dashboard()
+else:
+     # Ganti 300 dengan lebar yang diinginkan
+     # Streamlit app
+    st.image("Group 7.png", width=250) 
+    st.title("Welcome to Eduplus 👋")
+    option = st.selectbox("Choose Login or Register", ["Login", "Register"])
+
+    if option == "Login":
+        email = st.text_input("Email")
+        password = st.text_input("Password", type="password")
+        level = st.selectbox("Level", ["Student", "Teacher"])
+        if st.button("Login"):
+            if login(email, password, level):
+                user_ref = teachers_ref if level == "Teacher" else students_ref
+                user_data = user_ref.order_by_child(
+                    'email').equal_to(email).get()
+                st.session_state['user'] = list(user_data.values())[0]
+                st.experimental_set_query_params()
+                #st.experimental_rerun()
+
+    elif option == "Register":
+        id = st.text_input("ID")
+        level = st.selectbox("Level", ["Student", "Teacher"])
+        if level == "Student":
+            class_name = st.selectbox("Class", ["A", "B", "C"])
+        else:
+            class_name = st.selectbox(
+                "Subject", ["Math", "Science", "History"])
+        
+        email = st.text_input("Email")
+        name = st.text_input("Name")
+        password = st.text_input("Password", type="password")
+        image = st.file_uploader("Upload Profile Picture", type=[
+                                 "png", "jpg", "jpeg"])
+
+        if st.button("Register"):
+            if all([id,class_name, email, name, password, image, level]):
+                register(id,class_name, email, name, password, image, level)
+            else:
+                st.error("Please fill out all fields and upload a profile picture")
+
+# Stop the face detection process if the app stops
+if st.session_state.get('running', False):
+    stop_face_detection()
