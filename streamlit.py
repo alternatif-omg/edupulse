@@ -541,42 +541,41 @@ def show_dashboard():
 
         # Add feature for automatic and manual actions
         # Inisialisasi variabel global
-       # ESP32_IP = "http://192.168.17.134"  # Ganti dengan IP ESP32 Anda
+       # Inisialisasi variabel global
+        ESP32_IP = "http://192.168.17.134"  # Ganti dengan IP ESP32 Anda
 
-      #  st.title("Brightness")
+        st.title("Brightness")
 
 # Mode selection
-      #  mode = st.radio("Mode", ("Auto", "Manual"))
+        mode = st.radio("Mode", ("Auto", "Manual"))
 
-       # if mode == "Auto":
-       #    requests.post(f"{ESP32_IP}/control", json={"mode": "auto"})
-       # else:
-         #  requests.post(f"{ESP32_IP}/control", json={"mode": "manual"})
-         #  brightness = st.select_slider("Brightness", options=["Off", "Medium", "Bright"])
-         #  brightness_value = {"Off": 0, "Medium": 1, "Bright": 2}[brightness]
-         #  requests.post(f"{ESP32_IP}/control", json={"brightness": brightness_value})
+        if mode == "Auto":
+           requests.post(f"{ESP32_IP}/control", json={"mode": "auto"})
+        else:
+           requests.post(f"{ESP32_IP}/control", json={"mode": "manual"})
+           brightness = st.select_slider("Brightness", options=["Off", "Medium", "Bright"])
+           brightness_value = {"Off": 0, "Medium": 1, "Bright": 2}[brightness]
+           requests.post(f"{ESP32_IP}/control", json={"brightness": brightness_value})
 
 # Display sensor data
         st.header("Sensor Data")
         lux_value = st.empty()
         distance_value = st.empty()
 
-        lux_values = [611.00, 610.00, 612.00, 469.00, 428.00, 605.00, 603.00, 580.00, 563.00]
-        distance_values = [1192.00, 7.00, 5.00, 67.00, 20.00, 8.00, 87.00, 75.00]
-
         while True:
            try:
-              # Simulate fetching data from the ESP32
-              lux = random.choice(lux_values)
-              distance = random.choice(distance_values)
+              response = requests.get(f"{ESP32_IP}/data")
+              data = json.loads(response.text)
         
-              lux_value.metric("Light Level (Lux)", f"{lux:.2f}")
-              distance_value.metric("Distance (cm)", f"{distance:.2f}")
-        
-              time.sleep(1)
-           except Exception as e:
-             st.error(f"Failed to connect to ESP32: {e}")
-             break
+              lux_value.metric("Light Level (Lux)", f"{data['lux']:.2f}")
+              distance_value.metric("Distance (cm)", f"{data['distance']:.2f}")
+              
+           except:
+       # st.error("Failed to connect to ESP32")
+    
+             time.sleep(1)
+
+  
 
     # Implement manual action logic here
 
