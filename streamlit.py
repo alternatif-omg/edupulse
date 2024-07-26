@@ -608,9 +608,9 @@ def show_dashboard():
         else:
             st.write("")
 
-    if __name__ == "__main__":
+ #   if __name__ == "__main__":
 
-        main()
+  #      main()
 
     # Set polling interval
         polling_interval = 5  # in seconds
@@ -625,59 +625,97 @@ def show_dashboard():
 
 
 # Initialize session state
-if 'logged_in' not in st.session_state:
-    st.session_state['logged_in'] = False
-    st.session_state['user'] = None
-    st.session_state['level'] = None
-    st.session_state['running'] = False
+ if 'logged_in' not in st.session_state:
+        st.session_state['logged_in'] = False
+        st.session_state['running'] = False
+
+    if st.session_state['logged_in']:
+        show_dashboard()
+        if st.button("Log Out"):
+            st.session_state['logged_in'] = False
+            st.session_state['user'] = None
+            st.session_state['level'] = None
+            st.experimental_set_query_params()
+#if 'logged_in' not in st.session_state:
+ ##   st.session_state['logged_in'] = False
+   # st.session_state['user'] = None
+ #   st.session_state['level'] = None
+ #   st.session_state['running'] = False
+  #  st.experimental_set_query_params()
 
 # Load and display notifications
 
 
-
-
-if st.session_state['logged_in']:
-    show_dashboard()
 else:
+        tab1, tab2 = st.tabs(["Login", "Register"])
+
+        with tab1:
+            st.header("Login")
+            email = st.text_input("Email")
+            password = st.text_input("Password", type="password")
+            level = st.selectbox("Level", ["Student", "Teacher"])
+            if st.button("Login"):
+                login(email, password, level)
+
+        with tab2:
+            st.header("Register")
+            id = st.text_input("ID")
+            class_name = st.text_input("Class (for Students) / Subject (for Teachers)")
+            email = st.text_input("Email")
+            name = st.text_input("Name")
+            password = st.text_input("Password", type="password")
+            image = st.file_uploader("Profile Picture", type=["png", "jpg", "jpeg"])
+            level = st.selectbox("Level", ["Student", "Teacher"])
+            if st.button("Register"):
+                register(id, class_name, email, name, password, image, level)
+
+        if __name__ == "__main__":
+    main()
+            
+
+
+#if st.session_state['logged_in']:
+  #  show_dashboard()
+#else:
      # Ganti 300 dengan lebar yang diinginkan
      # Streamlit app
-    st.image("Group 7.png", width=250) 
-    st.title("Welcome to Eduplus 👋")
-    option = st.selectbox("Choose Login or Register", ["Login", "Register"])
+  #  st.image("Group 7.png", width=250) 
+  #  st.title("Welcome to Eduplus 👋")
+  #  option = st.selectbox("Choose Login or Register", ["Login", "Register"])
 
-    if option == "Login":
-        email = st.text_input("Email")
-        password = st.text_input("Password", type="password")
-        level = st.selectbox("Level", ["Student", "Teacher"])
-        if st.button("Login"):
-            if login(email, password, level):
-                user_ref = teachers_ref if level == "Teacher" else students_ref
-                user_data = user_ref.order_by_child(
-                    'email').equal_to(email).get()
-                st.session_state['user'] = list(user_data.values())[0]
-                st.experimental_set_query_params()
-                #st.experimental_rerun()
+   # if option == "Login":
+   #     email = st.text_input("Email")
+   #     password = st.text_input("Password", type="password")
+   #     level = st.selectbox("Level", ["Student", "Teacher"])
+    #    if st.button("Login"):
+    #        if login(email, password, level):
+      #          user_ref = teachers_ref if level == "Teacher" else students_ref
+      #          user_data = user_ref.order_by_child(
+      #              'email').equal_to(email).get()
+    #            st.session_state['user'] = list(user_data.values())[0]
+    #            st.experimental_set_query_params()
+    #            #st.experimental_rerun()
 
-    elif option == "Register":
-        id = st.text_input("ID")
-        level = st.selectbox("Level", ["Student", "Teacher"])
-        if level == "Student":
-            class_name = st.selectbox("Class", ["A", "B", "C"])
-        else:
-            class_name = st.selectbox(
-                "Subject", ["Math", "Science", "History"])
+   # elif option == "Register":
+   #     id = st.text_input("ID")
+   #     level = st.selectbox("Level", ["Student", "Teacher"])
+   #     if level == "Student":
+    #        class_name = st.selectbox("Class", ["A", "B", "C"])
+     #   else:
+    #        class_name = st.selectbox(
+     #           "Subject", ["Math", "Science", "History"])
         
-        email = st.text_input("Email")
-        name = st.text_input("Name")
-        password = st.text_input("Password", type="password")
-        image = st.file_uploader("Upload Profile Picture", type=[
+     #   email = st.text_input("Email")
+     #   name = st.text_input("Name")
+     #   password = st.text_input("Password", type="password")
+    #    image = st.file_uploader("Upload Profile Picture", type=[
                                  "png", "jpg", "jpeg"])
 
-        if st.button("Register"):
-            if all([id,class_name, email, name, password, image, level]):
-                register(id,class_name, email, name, password, image, level)
-            else:
-                st.error("Please fill out all fields and upload a profile picture")
+     #   if st.button("Register"):
+     #       if all([id,class_name, email, name, password, image, level]):
+     #           register(id,class_name, email, name, password, image, level)
+      #      else:
+      #          st.error("Please fill out all fields and upload a profile picture")
 
 # Stop the face detection process if the app stops
 if st.session_state.get('running', False):
