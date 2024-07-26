@@ -655,7 +655,8 @@ else:
                 user_data = user_ref.order_by_child(
                     'email').equal_to(email).get()
                 st.session_state['user'] = list(user_data.values())[0]
-                st.experimental_rerun()
+                st.experimental_set_query_params()
+                #st.experimental_rerun()
 
     elif option == "Register":
         id = st.text_input("ID")
