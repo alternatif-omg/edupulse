@@ -59,12 +59,19 @@ service_account_key = {
 }
 # print(service_account_key)
 
-# load directly
-cred = credentials.Certificate(service_account_key)
-firebase_admin.initialize_app(cred, {
+if not firebase_admin._apps:
+    cred = credentials.Certificate(service_account_key)
+    firebase_admin.initialize_app(cred, {
         'databaseURL': "https://faceattendance-a740a-default-rtdb.firebaseio.com/",
         'storageBucket': "faceattendance-a740a.appspot.com"
-})
+    })
+
+# load directly
+#cred = credentials.Certificate(service_account_key)
+#firebase_admin.initialize_app(cred, {
+#        'databaseURL': "https://faceattendance-a740a-default-rtdb.firebaseio.com/",
+#        'storageBucket': "faceattendance-a740a.appspot.com"
+#})
 
 # if not firebase_admin._apps:
 #     cred = credentials.Certificate(service_acccount_key)
