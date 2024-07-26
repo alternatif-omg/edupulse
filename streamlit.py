@@ -571,7 +571,7 @@ def show_dashboard():
               distance_value.metric("Distance (cm)", f"{data['distance']:.2f}")
               
            except:
-           st.error("Failed to connect to ESP32")
+             st.error("Failed to connect to ESP32")
     
              time.sleep(1)
 
